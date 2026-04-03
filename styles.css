@@ -1,0 +1,70 @@
+/* Claude Branch Chat - Styles v1.0.3 */
+
+[class*="font-user-message"],
+[class*="font-claude-response"] {
+  position: relative !important;
+}
+
+.claude-branch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px 4px 8px;
+  font-size: 11px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: #c97a4a;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 0.15s ease, transform 0.15s ease, background 0.12s ease;
+  pointer-events: none;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.claude-branch-btn svg { flex-shrink: 0; }
+
+[class*="font-user-message"]:hover .claude-branch-btn,
+[class*="font-claude-response"]:hover .claude-branch-btn {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.claude-branch-btn:hover { background: #b5693b; }
+.claude-branch-btn:active { transform: scale(0.96) !important; }
+
+.claude-branch-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(14px);
+  background: #1c1814;
+  color: #f5f0ea;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 450;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.claude-branch-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

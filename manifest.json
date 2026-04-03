@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Branch Chat",
+  "version": "1.0.3",
+  "description": "Branch any Claude conversation from any message into a new chat with full context",
+  "permissions": ["tabs", "scripting", "clipboardWrite"],
+  "host_permissions": ["https://claude.ai/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Claude Branch Chat"
+  }
+}
