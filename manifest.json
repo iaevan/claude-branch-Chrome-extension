@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Claude Branch Chat",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Branch any Claude conversation from any message into a new chat with full context",
   "permissions": ["tabs", "scripting", "clipboardWrite"],
   "host_permissions": ["https://claude.ai/*"],
