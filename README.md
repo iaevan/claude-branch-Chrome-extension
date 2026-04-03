@@ -3,7 +3,8 @@
 A lightweight Chrome Extension to "branch" your Claude.ai conversations. Seamlessly move context from one chat into a brand-new session with a single click.
 
 ---
-
+![Claude Branch Chat Demo](demo.gif)
+---
 ## 🚀 The Problem
 Claude conversations can become "heavy" or off-track over time. Sometimes you want to take the current context but start a fresh "branch" to explore a new idea without losing the history. 
 
@@ -28,8 +29,6 @@ Since this is a developer tool, install it via Chrome's Developer Mode:
 3.  Click it. A new tab will open with your context pre-filled.
 4.  Press **Enter** to start your new branch!
 
-## 📄 License
-MIT. 
 
 _Disclaimer: This project is an independent tool and is not affiliated with, or endorsed by, Anthropic._
 _All processing happens locally in your browser; no data is sent to external servers._
