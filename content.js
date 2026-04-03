@@ -5,7 +5,7 @@
 
   // ── Confirmed selectors from actual Claude DOM ─────────────────────────────
   const USER_SEL = '[class*="font-user-message"]';
-  const AI_SEL   = '[class*="font-claude-response"]';
+  const AI_SEL   = 'div.font-claude-response';
   const ALL_SEL  = `${USER_SEL}, ${AI_SEL}`;
 
   function getMessageEls() {
@@ -15,7 +15,7 @@
   function getRoleOf(el) {
     const cls = el.className || "";
     if (cls.includes("font-user-message")) return "You";
-    if (cls.includes("font-claude-response")) return "Claude";
+    if (cls.includes("font-claude-response relative")) return "Claude";
     return "Unknown";
   }
 
