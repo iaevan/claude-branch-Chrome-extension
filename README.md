@@ -26,6 +26,8 @@ Since this is a developer tool, install it via Chrome's Developer Mode:
 4.  Click **"Load unpacked"**.
 5.  Select the folder containing the extension files.
 
+> Quick Tip: To reload the extension after you've pulled new code, just go to chrome://extensions and click the Refresh icon (↻) on the Claude Branch Chat card.
+
 ## 📖 Usage
 1.  Open any chat on [claude.ai](https://claude.ai).
 2.  Hover over a message to see the **Branch here** button.
