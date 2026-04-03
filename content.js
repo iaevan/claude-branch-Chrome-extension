@@ -19,16 +19,29 @@
     return "Unknown";
   }
 
-  function extractMessagesUpTo(targetEl) {
-    const all = getMessageEls();
-    const messages = [];
-    for (const el of all) {
-      const text = (el.innerText || "").trim();
-      if (text) messages.push({ role: getRoleOf(el), text });
-      if (el === targetEl || el.contains(targetEl) || targetEl.contains(el)) break;
+function extractMessagesUpTo(targetEl) {
+  const all = getMessageEls();
+  const messages = [];
+  
+  for (const el of all) {
+    // 1. Clone the element so we don't mess up the actual UI
+    const clone = el.cloneNode(true);
+    
+    // 2. Find and remove the branch button from the clone
+    const btnInClone = clone.querySelector("." + BRANCH_BTN_CLASS);
+    if (btnInClone) {
+      btnInClone.remove();
     }
-    return messages;
+    
+    // 3. Now get the text—it will be clean of "Branch here"
+    const text = (clone.innerText || "").trim();
+    
+    if (text) messages.push({ role: getRoleOf(el), text });
+    
+    if (el === targetEl || el.contains(targetEl) || targetEl.contains(el)) break;
   }
+  return messages;
+}
 
   function formatAsMarkdown(messages) {
     const lines = [
