@@ -1,5 +1,5 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-f07326.svg)
-![Version](https://img.shields.io/badge/Version-1.0.3-orange)
+![Version](https://img.shields.io/badge/Version-1.0.4-orange)
 ![Platform](https://img.shields.io/badge/Platform-Chrome-blue)
 # Claude Branch Chat 🌿
 
