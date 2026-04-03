@@ -32,3 +32,6 @@ Since this is a developer tool, install it via Chrome's Developer Mode:
 
 _Disclaimer: This project is an independent tool and is not affiliated with, or endorsed by, Anthropic._
 _All processing happens locally in your browser; no data is sent to external servers._
+![License: MIT](https://img.shields.io/badge/License-MIT-f07326.svg)
+![Version](https://img.shields.io/badge/Version-1.0.3-orange)
+![Platform](https://img.shields.io/badge/Platform-Chrome-blue)
